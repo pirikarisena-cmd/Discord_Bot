@@ -159,12 +159,6 @@ async def favorite_remove(interaction: discord.Interaction, name: str):
             "⚠ その曲は登録されていません",
             ephemeral=True
         )
-@client.event
-async def on_ready():
-    tree.clear_commands(guild=GUILD)
-    await tree.sync(guild=GUILD)
-    print("🧹 ゴーストコマンド全削除完了")
-    await client.close()
 
 # =====================
 # 起動
